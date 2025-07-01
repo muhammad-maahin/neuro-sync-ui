@@ -1,0 +1,60 @@
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+/* Card Layout */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}
+
+/* Full Width Row (Recent Sessions) */
+.full-width {
+  grid-column: span 2;
+}
+
+.card-title {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card-highlight {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4A90E2;
+}
+
+.card-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.notifications {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.notifications li {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.danger {
+  color: red;
+}
+.success {
+  color: green;
+}
+.info {
+  color: #007BFF;
+}

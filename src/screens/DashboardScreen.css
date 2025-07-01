@@ -1,0 +1,218 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Inter', 'SF Pro Display', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #101529; /* dark navy */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+
+.sidebar-logo {
+  width: 140px;
+  margin-bottom: 40px;
+  align-self: center;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-item {
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #1e2a48;
+}
+
+.nav-item.active {
+  background-color: #E6F0FF;
+  font-weight: bold;
+  color: #4A90E2;
+  border-left: 4px solid #4A90E2;
+}
+
+/* Logout */
+.logout-wrapper {
+  margin-top: auto;
+}
+
+.logout-btn {
+  display: block;
+  background-color: #007BFF;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Main Panel Placeholder */
+.main-panel {
+  flex: 1;
+  padding: 40px;
+  background-color: #f5f7fb;
+}
+/* Top Bar */
+.top-bar {
+  height: 80px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.top-bar h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Content Area */
+.content-area {
+  background-color: #F5F7FA;
+  flex: 1;
+  padding: 30px;
+  min-height: calc(100vh - 80px); /* minus top bar height */
+}
+
+/* Logout Button */
+.logout-btn {
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #0056b3;
+}
+
+.logout-text {
+  color: #E57373; /* Pink text only */
+  font-weight: 600;
+}
+
+/* Layout Correction */
+.main-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f7fa;
+  padding-top: 80px; /* Add this line to push Top Bar downward */
+}
+
+
+/* Top Bar – Flush to Top */
+.top-bar {
+  height: 80px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  z-index: 2;
+}
+
+/* Content Area – Beneath Top Bar */
+.content-area {
+  flex: 1;
+  padding: 30px;
+  min-height: calc(100vh - 80px);
+  background-color: #F5F7FA;
+}
+/* Footer Status Bar */
+.footer-status-bar {
+  background-color: #FFFFFF;
+  border-top: 1px solid #DDD;
+  margin-top: 30px;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  border-radius: 8px;
+  box-shadow: 0 -1px 4px rgba(0,0,0,0.03);
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0;
+    position: relative;
+  }
+
+  .logo {
+    width: 60px;
+    height: auto;
+  }
+
+  .topbar {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .content-area {
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .dashboard-card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .footer-area {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+
+  .battery-status,
+  .session-summary {
+    width: 100%;
+  }
+}
+

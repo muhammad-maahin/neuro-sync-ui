@@ -1,0 +1,85 @@
+.session-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.session-card:hover {
+  transform: translateY(-2px);
+}
+
+.session-info p {
+  margin: 6px 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.session-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.session-actions button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.replay-btn {
+  background-color: #e1f5fe;
+  color: #0277bd;
+}
+
+.download-btn {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.view-btn {
+  background-color: #ede7f6;
+  color: #6a1b9a;
+}
+
+.delete-btn {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+@media (max-width: 768px) {
+  .session-card {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .session-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .session-actions button {
+    flex: 1 1 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .session-actions {
+    flex-direction: column;
+  }
+
+  .session-actions button {
+    width: 100%;
+  }
+}
+
+
